@@ -48,3 +48,20 @@ En esta primera etapa se realizó:
   ➡️ La validación detallada de **rangos y coherencia** se documenta en el notebook **2_transformation.ipynb** como parte de la limpieza estructural.  
 
 Estas observaciones confirmaron que el dataset requería una limpieza estructurada, abordada en el notebook `2_transformation.ipynb`.
+
+## 🧹 Limpieza aplicada: `2_transformation.ipynb`
+
+La limpieza se realizó mediante funciones modulares definidas en `cleaning.py`, aplicadas en orden lógico:
+
+- Se convirtieron los nombres de las columnas a **minúsculas** para facilitar el acceso y mantener coherencia.  
+- No se aplicaron otras transformaciones, ya que los nombres ya estaban correctamente formateados.  
+- Se identificaron valores nulos en tres columnas categóricas (`teacher_quality`, `distance_from_home`, `parental_education_level`).  
+  ➡️ No se realizó imputación, siguiendo la decisión de mantener los datos originales y permitir que las visualizaciones gestionen automáticamente los registros incompletos.  
+- Se añadieron **comprobaciones de coherencia y rangos** en todas las **variables numéricas**:  
+  - `attendance` (0–100)  
+  - `sleep_hours` (0–24)  
+  - `hours_studied`, `tutoring_sessions`, `physical_activity` (no negativos)  
+  - `exam_score` y `previous_scores` (0–100)  
+- En estas comprobaciones se detectó un único valor fuera de rango en `exam_score` (101).  
+  ➡️ Se corrigió manualmente a 100, documentando la decisión de forma explícita.  
+- Se revisaron también los valores únicos de las columnas categóricas para confirmar su coherencia.
