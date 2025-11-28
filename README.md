@@ -26,7 +26,7 @@ Realizar un flujo completo de análisis exploratorio inicial (EDA) sobre un data
 3. Visualizaciones básicas para interpretar el comportamiento de las variables clave.
 4. Conclusiones exploratorias, documentadas al final de cada notebook.
 
-## Dataset utilizado
+## 📄 Dataset utilizado
 - Nombre: Student Performance Factors
 - Fuente: [Kaggle](https://www.kaggle.com/datasets/ayeshaseherr/student-performance)
 - Descripción: Dataset que recoge factores sociales, académicos y personales que pueden influir en el rendimiento estudiantil.
