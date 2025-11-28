@@ -103,3 +103,11 @@ Esto confirma que la decisión de no imputar nulos no compromete la calidad del 
 - **Gráfico de barras agrupadas de `motivation_level` por `distance_from_home`**  
   - Propósito: explorar si la distancia entre el hogar y la escuela influye en la motivación del alumnado.  
   - Lectura: la motivación media es la más común en todos los grupos, especialmente entre quienes viven cerca. El gráfico sugiere que la cercanía podría tener un efecto positivo sobre la motivación.
+
+## 📌 Conclusiones
+Este proyecto demuestra cómo estructurar un flujo completo de análisis **exploratorio**, desde la *carga* y *revisión inicial del dataset* hasta la **limpieza modular** y la generación de **visualizaciones interpretativas**.   
+La división en tres notebooks permite documentar cada etapa de forma clara y progresiva, facilitando la trazabilidad del razonamiento aplicado.
+
+El análisis ha cubierto variables de contexto (`attendance`), hábitos personales (`sleep_hours`, `hours_studied`), rendimiento académico (`exam_score`), 
+factores familiares y escolares (`parental_education_level`, `distance_from_home`, `school_type`), 
+así como motivación del alumnado (`motivation_level`), ofreciendo una visión integral del dataset.
