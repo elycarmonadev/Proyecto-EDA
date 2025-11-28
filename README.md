@@ -133,4 +133,4 @@ así como motivación del alumnado (`motivation_level`), ofreciendo una visión 
 |                    | Principales hallazgos | ✔️ | Lecturas en cada visualización |
 |                    | Cambios aplicados en limpieza | ✔️ | Documentados en README y notebook |
 | **Repositorio**    | Estructura ordenada | ✔️ | `data/`, `notebooks/`, `src/`, `README.md` |
-|                    | Documentación clara | ✔️ | README completo y defensivo |
+|                    | Documentación clara | ✔️ | README completo |
