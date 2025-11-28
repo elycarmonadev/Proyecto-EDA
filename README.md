@@ -111,3 +111,26 @@ La división en tres notebooks permite documentar cada etapa de forma clara y pr
 El análisis ha cubierto variables de contexto (`attendance`), hábitos personales (`sleep_hours`, `hours_studied`), rendimiento académico (`exam_score`), 
 factores familiares y escolares (`parental_education_level`, `distance_from_home`, `school_type`), 
 así como motivación del alumnado (`motivation_level`), ofreciendo una visión integral del dataset.
+
+## ✅ Checklist de Autoevaluación Proyecto EDA
+
+| Etapa              | Requisito del enunciado | ¿Cumplido? | Evidencia en tu proyecto |
+|--------------------|-------------------------|------------|--------------------------|
+| **Exploración**    | Identificar estructura y tipos de datos | ✔️ | `1_exploration.ipynb` (dimensiones, tipos) |
+|                    | Revisar duplicados | ✔️ | Documentado: 0 duplicados |
+|                    | Detectar valores nulos | ✔️ | Tres columnas categóricas con nulos, decisión de no imputar |
+|                    | Revisar rangos y coherencias | ✔️ | Preparado y documentado para `2_transformation.ipynb` |
+|                    | Distribución inicial y outliers | ✔️ | Histogramas y boxplots en `3_eda.ipynb` |
+| **Limpieza**       | Corregir tipos de datos | ✔️ | No fue necesario, documentado |
+|                    | Gestionar nulos | ✔️ | Decisión explícita de no imputar |
+|                    | Eliminar duplicados | ✔️ | No había duplicados |
+|                    | Normalizar categorías | ✔️ | Revisión de valores únicos |
+|                    | Corregir incoherencias | ✔️ | `exam_score` 101 → 100 |
+| **Visualización**  | Histograma | ✔️ | `attendance`, `sleep_hours` |
+|                    | Gráfico de barras | ✔️ | `parental_education_level` por `school_type`, `motivation_level` por `distance_from_home` |
+|                    | Visualización adicional | ✔️ | Boxplots (`exam_score`, `hours_studied`, etc.) |
+| **Conclusiones**   | Resumen claro del dataset | ✔️ | Bloque de conclusiones en README |
+|                    | Principales hallazgos | ✔️ | Lecturas en cada visualización |
+|                    | Cambios aplicados en limpieza | ✔️ | Documentados en README y notebook |
+| **Repositorio**    | Estructura ordenada | ✔️ | `data/`, `notebooks/`, `src/`, `README.md` |
+|                    | Documentación clara | ✔️ | README completo y defensivo |
