@@ -2,35 +2,31 @@
 
 Este repositorio contiene el proyecto de **Exploración, Limpieza y Visualización Básica de un Dataset**.
 
-## Estructura
-- `data/`: contiene el dataset en formato CSV.
-- `notebooks/`: incluye el notebook `eda.ipynb` con el análisis.
+## 📁 Estructura
+- `data/`: contiene el dataset original en formato CSV y el limpio
+  - student_performance.csv
+  - student_clean.csv
+
+- `notebooks/`: incluye los notebooks:
+  - 1_exploration.ipynb
+  - 2_transformation.ipynb
+  - 3_eda.ipynb
+
+- `src/`: contiene los 2 los dos .py que usaremos en la limpieza y visualización
+  - cleaning.py
+  - visualization.py
+
 - `README.md`: explicación general del proyecto.
 - `requirements.txt`: dependencias.
 
-## Objetivo
-Realizar un flujo completo de análisis exploratorio inicial (EDA) sobre un dataset real:
-1. Carga del dataset.
-2. Exploración inicial.
-3. Limpieza y normalización.
-4. Visualizaciones básicas.
-5. Conclusiones exploratorias.
+## 🎯 Objetivo
+Realizar un flujo completo de análisis exploratorio inicial (EDA) sobre un dataset real, dividido en tres etapas:
+1. Exploración inicial del dataset para detectar incoherencias, nulos y patrones generales.
+2. Limpieza estructurada mediante funciones modulares encapsuladas en cleaning.py.
+3. Visualizaciones básicas para interpretar el comportamiento de las variables clave.
+4. Conclusiones exploratorias, documentadas al final de cada notebook.
 
 ## Dataset utilizado
 - Nombre: Student Performance Factors
 - Fuente: [Kaggle](https://www.kaggle.com/datasets/ayeshaseherr/student-performance)
 - Descripción: Dataset que recoge factores sociales, académicos y personales que pueden influir en el rendimiento estudiantil.
-
-## Limpieza aplicada
-
-- Se convirtieron los nombres de las columnas a minúsculas para facilitar el acceso y mantener coherencia.
-- No se aplicaron otras transformaciones, ya que los nombres ya estaban correctamente formateados.
-- Se sustituyeron valores nulos en tres columnas categóricas (`teacher_quality`, `distance_from_home`, `parental_education_level`) utilizando el modo (máxima frecuencia).
-- Se convirtieron 13 columnas object al tipo `category` para optimizar el uso de memoria, facilitar visualizaciones y agrupaciones.
-- Se verificó que no existieran duplicados.
-- Se revisaron los rangos de las variables numéricas (`attendance`, `sleep_hours`, `hours_studied`, `tutoring_sessions`, `physical_activity`) y no se detectaron valores fuera de rango ni negativos.
-- Se comprobó que las variables categóricas contienen únicamente las categorías esperadas.
-
-La limpieza se realizó paso a paso en el notebook, sin encapsular en funciones, para facilitar la documentación  
-y el seguimiento del razonamiento aplicado en cada etapa.
-
