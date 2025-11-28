@@ -65,3 +65,41 @@ La limpieza se realizó mediante funciones modulares definidas en `cleaning.py`,
 - En estas comprobaciones se detectó un único valor fuera de rango en `exam_score` (101).  
   ➡️ Se corrigió manualmente a 100, documentando la decisión de forma explícita.  
 - Se revisaron también los valores únicos de las columnas categóricas para confirmar su coherencia.
+
+## 📈 Visualizaciones realizadas: `3_eda.ipynb`
+
+El proyecto incluye las siguientes visualizaciones para explorar el comportamiento de las variables clave:
+
+➡️ En las variables categóricas con valores nulos (`parental_education_level`, `distance_from_home`), las visualizaciones se han generado excluyendo automáticamente los registros incompletos. 
+Esto confirma que la decisión de no imputar nulos no compromete la calidad del análisis.
+
+- **Histograma:** `attendance`  
+  - Propósito: visualizar la distribución de asistencia entre estudiantes y detectar concentraciones en los valores altos.
+  - Lectura: La mayoría de estudiantes presentan niveles de asistencia elevados, con un pico claro en el valor máximo (100 asistencias). Esto sugiere un patrón de compromiso generalizado, aunque también se observan algunos casos con asistencia más baja que podrían requerir atención.
+
+- **Histograma:** `sleep_hours`  
+  - Propósito: mostrar la forma de la distribución de horas de sueño, identificar patrones de descanso y posibles casos de sueño insuficiente o excesivo.
+  - Lectura: La distribución es aproximadamente normal, con un pico en las 7 horas de sueño. Esto indica que la mayoría de estudiantes mantienen hábitos de descanso saludables, aunque también hay casos de sueño insuficiente (<6h) o excesivo (>9h) que podrían influir en el rendimiento académico.
+
+- **Boxplots:** `exam_score` y `hours_studied`  
+  - Propósito: detectar valores atípicos, comparar rangos y medianas.
+  - Lectura:
+    - `exam_score`: distribución centrada, con varios valores atípicos en el extremo inferior, lo que sugiere que algunos estudiantes tienen dificultades significativas.
+
+    - `hours_studied`: zona media estrecha, con algunos estudiantes que estudian mucho más o mucho menos que la mayoría, lo que refleja diferencias marcadas en el esfuerzo individual.
+
+- **Gráfico de barras agrupadas de `parental_education_level` por `school_type`**  
+  - Propósito: comparar el nivel educativo de los padres según el tipo de escuela (pública o privada).  
+  - Lectura: en ambos tipos de escuela predominan padres con estudios secundarios, aunque las escuelas privadas tienen una proporción ligeramente mayor de padres con estudios universitarios o de posgrado. El gráfico aporta contexto sobre el perfil educativo de las familias.
+
+- **Boxplot de `exam_score` por `parental_education_level`**  
+  - Propósito: comparar el rendimiento académico según el nivel educativo de los padres.  
+  - Lectura: los estudiantes cuyos padres tienen estudios universitarios o de posgrado tienden a obtener notas más altas, mientras que los de padres con estudios secundarios muestran mayor variabilidad. El gráfico sugiere que el entorno educativo familiar puede influir en el desempeño.
+
+- **Boxplot de `exam_score` por `school_type`**  
+  - Propósito: comparar el rendimiento académico entre estudiantes de escuelas públicas y privadas.  
+  - Lectura: las medianas son similares en ambos grupos, aunque las escuelas privadas muestran una dispersión ligeramente menor. El gráfico sugiere que el rendimiento es comparable entre tipos de escuela.
+
+- **Gráfico de barras agrupadas de `motivation_level` por `distance_from_home`**  
+  - Propósito: explorar si la distancia entre el hogar y la escuela influye en la motivación del alumnado.  
+  - Lectura: la motivación media es la más común en todos los grupos, especialmente entre quienes viven cerca. El gráfico sugiere que la cercanía podría tener un efecto positivo sobre la motivación.
